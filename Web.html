@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ridiculously Simple Page</title>
+
+    <style>
+      button {
+        font-weight: bold;
+        margin: 1em;
+        padding: 1em;
+        background-color: blue;
+        color: white;
+      }
+
+      h1 {
+        font-size: 1.25em;
+        font-weight: bold;
+      }
+
+      span#counter {
+        font-style: italic;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click the button!</h1>
+
+    <button id="press_me">Press Me!</button>
+
+    <div>You've pressed the button <span id="counter">0</span> times.</div>
+
+    <script language="javascript">
+      let counter         = 0,
+          counter_display = document.getElementById('counter'),
+          button          = document.getElementById('press_me');
+
+      button.addEventListener('click', function() {
+        counter++;
+        counter_display.innerHTML = counter;
+      });
+    </script>
+  </body>
+</html>
