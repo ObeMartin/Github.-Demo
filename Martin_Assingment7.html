@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Learn the city weather.</p>
+
+<button. id='getWeather'>It's</button> <!-- The button that yo can click and get weather updates. -->
+
+<div id="getWeather"></div>
+ 
+<script>
+  
+  function flickrResults(json){
+    
+    var myDiv = document.getElementById("getWeather");
+   
+    myDiv.innerHTML = "<img src= '" + json.items[0].media.m + "' />" ; //get weather images and show me the weather related picture.
+   
+     console.log(json),('getWeather'); 
+     
+     } 
+   
+</script>
+    
+<script
+src='https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=d27ed60a3157c4fdc7e7471b01632947&unis=metric',getWeather> //Add your weather API to replace the curly blackets after appid=
+</script>
+
+</body>
+</html>
+
+<!-- What I was shooting for is that, adding a city name in the api link above, 
+gives you updates on that city's weather. -->
